@@ -1,0 +1,21 @@
+Package: cliplot
+Title: Command Line Interface Plotting library
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Brandon",
+           family = "Nesterenko",
+           role = c("aut", "cre"),
+           email = "bnestere@uccs.edu",
+           comment = c(ORCID = "0000-0001-7754-5226"))
+Description: What the package does (one paragraph).
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Imports: optparse,
+    rlang,
+    dplyr,
+    magrittr,
+    ggpubr,
+    ggpmisc
