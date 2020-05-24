@@ -19,5 +19,6 @@ export_barplot <- function (data, opt) {
     ggarrange() %>%
     ggexport(filename=opt$outfile)
 
-  mutate(data, !!gbsym := orig_groupby_col)
+  data[,opt$groupby] <- orig_groupby_col
+  data
 }

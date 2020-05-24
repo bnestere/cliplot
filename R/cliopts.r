@@ -10,7 +10,7 @@
 #' @param default_groupby Default field to group the data into
 #' @return A list of options available
 #' @export
-init_opts <- function(default_infile, default_outfile, default_x, default_y, default_groupby) {
+init_opts <- function(default_infile, default_outfile, default_x, default_y, default_groupby, default_facetvar) {
   list(
        optparse::make_option(c("-i", "--infile"), type="character", default=default_infile,
                              help="dataset file name", metavar="character"),
@@ -24,7 +24,11 @@ init_opts <- function(default_infile, default_outfile, default_x, default_y, def
                              help="field to group the data by in the output graph", 
                              metavar="character"),
        optparse::make_option(c("-d", "--digits"), type="integer", default=2,
-                             help="number of digits after the decimal point to display")
+                             help="number of digits after the decimal point to display"),
+       optparse::make_option(c("-f", "--facetvar"), type="character", default=default_facetvar,
+                             help="variable for segmenting facets", metavar="character"),
+       optparse::make_option(c("--facetcols"), type="integer", default=2,
+                             help="number of columns per row for facets")
        )
 }
 
