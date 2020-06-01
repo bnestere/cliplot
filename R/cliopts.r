@@ -8,6 +8,7 @@
 #' @param default_x Default field to use for the x axis
 #' @param default_y Default field to use for the y axis
 #' @param default_groupby Default field to group the data into
+#' @param default_facetvar Default field to facet the data by
 #' @return A list of options available
 #' @export
 init_opts <- function(default_infile, default_outfile, default_x, default_y, default_groupby, default_facetvar) {
@@ -56,10 +57,11 @@ finalize_opts <- function(option_list) {
 #' @param default_x Default field to use for the x axis
 #' @param default_y Default field to use for the y axis
 #' @param default_groupby Default field to group the data into
+#' @param default_facetvar Default field to segment the facets by
 #' @return The list of arguments provided on the cmd line by the user
 #' @export
-cli_process <- function(domain_opts, default_infile, default_outfile, default_x, default_y, default_groupby) {
-  init_opts(default_infile, default_outfile, default_x, default_y, default_groupby) %>%
+cli_process <- function(domain_opts, default_infile, default_outfile, default_x, default_y, default_groupby, default_facetvar) {
+  init_opts(default_infile, default_outfile, default_x, default_y, default_groupby, default_facetvar) %>%
     c(domain_opts) %>%
     finalize_opts()
 }
