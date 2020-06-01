@@ -10,7 +10,8 @@ cli_process(
   default_outfile,
   default_x,
   default_y,
-  default_groupby
+  default_groupby,
+  default_facetvar
 )
 }
 \arguments{
@@ -25,6 +26,8 @@ cli_process(
 \item{default_y}{Default field to use for the y axis}
 
 \item{default_groupby}{Default field to group the data into}
+
+\item{default_facetvar}{Default field to segment the facets by}
 }
 \value{
 The list of arguments provided on the cmd line by the user

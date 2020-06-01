@@ -9,7 +9,8 @@ init_opts(
   default_outfile,
   default_x,
   default_y,
-  default_groupby
+  default_groupby,
+  default_facetvar
 )
 }
 \arguments{
@@ -22,6 +23,8 @@ init_opts(
 \item{default_y}{Default field to use for the y axis}
 
 \item{default_groupby}{Default field to group the data into}
+
+\item{default_facetvar}{Default field to facet the data by}
 }
 \value{
 A list of options available
